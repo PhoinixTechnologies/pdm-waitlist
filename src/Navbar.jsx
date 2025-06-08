@@ -106,8 +106,8 @@ const Navbar = () => {
     }
     
   return (
-   <AnimatePresence>
-       <motion.nav
+  <AnimatePresence>
+      <motion.nav
     variants={navAnimate}
     initial='initial'
     animate='visible'
@@ -120,14 +120,14 @@ const Navbar = () => {
           whileHover='hover'
           className='font-logo tracking-wide hidden md:block'>My PDM Tutor</motion.h3></a>
         </div>
-        <div className='flex' className='border' onClick={linkVisibility}>
+        <div className='flex' className='' onClick={linkVisibility}>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id='btn1' className='md:hidden'>
           <rect width="24" height="24" fill="black" fillOpacity="0.32"/>
           <path d="M3 17H21V15H3V17Z" fill="white"/>
           <path d="M3 9H21V7H3V9Z" fill="white"/>
         </svg>
         </div>
-     </div>
+    </div>
       <AnimatePresence>
         {isvisible && (
           <motion.div 
@@ -138,7 +138,7 @@ const Navbar = () => {
             className='mt-2 bg-black/60 px-10 py-2 flex flex-col md:flex-row items-end md:items-center gap-y-3 gap-x-3 md:min-w-[70%] md:justify-between  md:flex'>
             <AnimatePresence>
               {isvisible && (
-                 <motion.div 
+                <motion.div 
                   variants={linkAnimate}
                 className=" overflow-hidden flex text-white gap-x-10 items-end md:items-center md:justify-center font-normal font-link max-w-80 flex-col md:flex-row gap-y-3 " >
                 <motion.a 
@@ -162,12 +162,12 @@ const Navbar = () => {
               <Link to="/join" className=" font- flex justify-center bg-white rounded-full px-6 py-3 max-w-40 items-center">Join Waitlist</Link>
             </motion.div>
           </AnimatePresence>
-     </motion.div>
+    </motion.div>
         )}
       </AnimatePresence>
     </motion.nav>
 
-   </AnimatePresence>
+  </AnimatePresence>
   );
 };
 

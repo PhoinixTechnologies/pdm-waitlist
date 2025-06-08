@@ -70,7 +70,7 @@ const Home = () => {
             }}
             type="button" className='flex gap-x-0 bg-[#3935FF] w-max items-center px-5 py-3 rounded-4xl mt-0 h-max self-center'>
                   <p className=' items-center text-xl font-semibold text-white  font-link'>
-                 <Link to="/join">Join Waitlist🔥</Link> 
+                <Link to="/join">Join Waitlist🔥</Link> 
                   </p>
               </motion.button>
               <motion.svg
