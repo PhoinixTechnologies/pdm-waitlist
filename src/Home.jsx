@@ -1,29 +1,50 @@
 import back from './img/BG1.jpeg'
 import Navbar from './Navbar';
+// eslint-disable-next-line no-unused-vars
 import {motion} from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+const imgAnimate = {
+  initial: {
+    opacity: 0
+  },
+  visible: {
+    opacity:1,
+    transition: {
+      duration:1.5
+    }
+  }
+}
 
+const textAnimate = {
+  initial:{
+    scale: 0.1,
+    opacity:0
+  },
+  visible: {
+    scale: 1.0,
+    opacity:1,
+    transition: { 
+              delay:2.0,
+              duration: 0.8,       // Animation duration in seconds
+              ease: "easeOut"}
+
+  }
+
+}
 const Home = () => {
     return (
       <div className=' max-w-full '>
         <motion.div
-        initial={{opacity:0}}
-        animate={{opacity:1}}
-        transition={{
-          duration:1.5
-        }}
+          variants={imgAnimate}
+          initial='initial'
+          animate='visible'
         className=" h-max w-full bg-cover bg-no-repeat 
       bg-center" style={{backgroundImage:`url(${back}) `}} >
         <div className='bg-black/70 w-full h-full p-20 pt-50 flex flex-col items-center justify-start gap-y-5 box-border'>
         <Navbar/>
           <motion.h1
-          initial={{scale: 0.1,opacity:0}}
-            animate={{scale: 1.0,opacity:1}}
-            transition={{ 
-              delay:2.0,
-              duration: 0.8,       // Animation duration in seconds
-              ease: "easeOut"}}
+          variants={textAnimate}
             className='text-white text-[35px] sm:max-md:text-4xl md:text-6xl/16 font-semibold pb-5 text-center font-link w-90 md:max-lg:w-fit lg:w-5xl'>Empowering Learners in Python,
           Data Analytics & Machine Learning</motion.h1>
 
@@ -38,7 +59,7 @@ const Home = () => {
           className='text-[#BDBCBC] w-70 md:w-120 p-2 text-center sm:max-md:w-100 sm:max-md:text-xl text-md/6 font-link'>At our core, we’re driven by a shared passion for helping students and professionals thrive in Python, 
           Data Analysis, and Machine Learning, unlocking skills that open doors to limitless opportunities.
             </motion.p>
-           <div className='flex relative mt-10'>
+          <div className='flex relative mt-10'>
             <motion.button
             initial={{x:'-100vw'}}
             animate={{x:0}}
@@ -47,7 +68,7 @@ const Home = () => {
               type:'spring',
               stiffness:120
             }}
-             type="button" className='flex gap-x-0 bg-[#3935FF] w-max items-center px-5 py-3 rounded-4xl mt-0 h-max self-center'>
+            type="button" className='flex gap-x-0 bg-[#3935FF] w-max items-center px-5 py-3 rounded-4xl mt-0 h-max self-center'>
                   <p className=' items-center text-xl font-semibold text-white  font-link'>
                  <Link to="/join">Join Waitlist🔥</Link> 
                   </p>
@@ -82,13 +103,13 @@ const Home = () => {
             }
             className='text-white font-light self-center text-center w-30 text-lg/5 transform rotate-[10.943deg] self-start absolute -top-7 -right-17 font-dog'>All research start from here</motion.p>
 
-           </div>
-         </div>
+          </div>
+        </div>
         
         </motion.div>
-       </div>
+      </div>
     );
 }
- 
+
 export default Home;
 
