@@ -135,7 +135,7 @@ const Navbar = () => {
           initial='initial'
           animate='visible'
           exit='exit'
-            className='border mt-2 bg-black/60 px-10 py-2 flex flex-col md:flex-row items-end md:items-center gap-y-3 gap-x-3 md:min-w-[70%] md:justify-between  md:flex'>
+            className='mt-2 bg-black/60 px-10 py-2 flex flex-col md:flex-row items-end md:items-center gap-y-3 gap-x-3 md:min-w-[70%] md:justify-between  md:flex'>
             <AnimatePresence>
               {isvisible && (
                  <motion.div 
