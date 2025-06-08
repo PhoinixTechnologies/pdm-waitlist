@@ -1,7 +1,8 @@
-import back from './img/BG1.png'
+import back from './img/BG1.jpeg'
 import Navbar from './Navbar';
 // eslint-disable-next-line no-unused-vars
 import {motion} from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const imgAnimate = {
   initial: {
@@ -55,9 +56,8 @@ const Home = () => {
             type:'spring',
             stiffness:110
             }}
-          className='text-[#BDBCBC] w-70 md:w-120 p-2 text-center sm:max-md:w-100 sm:max-md:text-xl text-md/6 font-link'>As a dedicated tutor, I am passionate about helping
-              students and professionals unlock their true potential <br />
-              in Python programming, data science and machine learning.
+          className='text-[#BDBCBC] w-70 md:w-120 p-2 text-center sm:max-md:w-100 sm:max-md:text-xl text-md/6 font-link'>At our core, we’re driven by a shared passion for helping students and professionals thrive in Python, 
+          Data Analysis, and Machine Learning, unlocking skills that open doors to limitless opportunities.
             </motion.p>
           <div className='flex relative mt-10'>
             <motion.button
@@ -70,7 +70,7 @@ const Home = () => {
             }}
             type="button" className='flex gap-x-0 bg-[#3935FF] w-max items-center px-5 py-3 rounded-4xl mt-0 h-max self-center'>
                   <p className=' items-center text-xl font-semibold text-white  font-link'>
-                  Join Waitlist 🔥
+                 <Link to="/join">Join Waitlist🔥</Link> 
                   </p>
               </motion.button>
               <motion.svg
