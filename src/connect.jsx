@@ -1,5 +1,8 @@
-
+import { Link } from 'react-router-dom';
 import Plogo from './img/Plogo.png'
+import logo from './img/My_PDM_Tutor_1-removebg-preview.png';
+
+
 const Connect = () => {
     return (
         <div className=' w-full bg-black pt-10 flex flex-col gap-y-5 h-max ' id='connect'>
@@ -45,14 +48,22 @@ const Connect = () => {
                     </p>
                 </div>
                 <div className='flex p-2 font-logo w-[90%] sm:max-md:w-[40%] md:w-[50%] h-max items-center sm:max-md:flex-col sm:max-md:gap-y-'>
-                   <input type="email" name="" id="" placeholder='Enter your email address' className='outline-none bg-white/10 pl-5 pr-10 py-5 rounded-l-2xl w-full sm:max-md:py-2 sm:max-md:px-2 sm:max-md:rounded-2xl' />
-                   <button className=' px-5 py-5 bg-white text-[#2A27C9] rounded-r-2xl font-semibold shadow-lg shadow-black/10 cursor-pointer sm:max-md:py-3 sm:max-md:rounded-2xl'>Suscribe</button>
+                   <form onSubmit={(e) => {
+                    e.preventDefault();//prevent page reloading
+                    alert('You have subscribed successfully!')
+                   }}
+                   className="flex w-full max-w-md">
+                    <input type="email" name="" id="" placeholder='Enter your email address' 
+                   className='outline-none bg-white/10 pl-5 pr-10 py-5 rounded-l-2xl w-full sm:max-md:py-2 sm:max-md:px-2 sm:max-md:rounded-2xl' required />
+                   <button className=' px-5 py-5 bg-white text-[#2A27C9] rounded-r-2xl font-semibold shadow-lg shadow-black/10 
+                   cursor-pointer sm:max-md:py-3 sm:max-md:rounded-2xl'>Subscribe</button>
+                   </form>
                 </div>
             </div>
             <div className='flex w-full gap-x-10 justify-center text-white h-max p-20 py-10 items-center'>
                <div className='flex flex-col gap-y-10 font-link'>
                 <div className='flex items-end gap-x-2'>
-                    <img src={Plogo} alt="" className='w-10' />
+                    <img src={logo} alt="" className='w-10' />
                     <h1 className=' font-bold text-3xl sm:text-xl '>My PDM Tutor</h1>
                 </div>
                 <div className='text-sm font-light flex flex-col gap-y-5 md:gap-y-2'>

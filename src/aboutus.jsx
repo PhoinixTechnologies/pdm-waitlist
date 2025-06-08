@@ -1,4 +1,5 @@
 import about from './img/about.png'
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -24,13 +25,15 @@ const About = () => {
                             <h3 className='Headings'>About Us</h3>
                         </div>
                         <p className='flex md:max-w-160 font-link text-md leading-6 font-medium h-max md:row-start-2 md:text-sm text-justify md:text-left'>
-                            As a dedicated tutor, I am passionate about helping students and professionals unlock their true potential in Python programming, data science, and machine learning. With a hands-on, personalized approach, I strive to make complex concepts accessible and engaging for learners at all levels. My goal is to empower you with the knowledge and practical skills needed to thrive in the fast-growing fields of data analytics and AI. Whether you’re starting from scratch or looking to advance your expertise, I am here to guide you every step of the way, ensuring your learning journey is both fulfilling and impactful.
+                           We are a passionate team of educators dedicated to helping students and professionals discover and unleash their full potential in Python Programming, Data Analysis, and Machine Learning.
+                            By combining a hands-on, learner-centered approach with real-world applications, we simplify complex topics and make learning both enjoyable and effective.
+                            Our mission is to equip you with the practical skills and deep understanding needed to thrive in today’s data-driven world. Whether you're just beginning or seeking to level up, we’re here to walk the journey with you.....Every step of the way.
                         </p>
                         <div className=' w-80 md:w-100 h-full rounded-4xl md:row-span-3 h-max'>
                                 <img src={about} alt="" className='rounded-4xl h-auto w-full max-w-full'/>
                         </div>
                         <div className='flex gap-x-4 items-center col-start-1 md:row-start-3 md:justify-self-start w-full justify-evenly md:justify-center md:justify-start'>
-                                <a href="/" className='flex items-center px-4 py-4 w-max  rounded-2xl bg-white text-black justify-center tracking-wide font-medium inset-shadow-sm inset-shadow-black-500'>Get started</a>
+                                <Link to="/join"><a href="/" className='flex items-center px-4 py-4 w-max  rounded-2xl bg-white text-black justify-center tracking-wide font-medium inset-shadow-sm inset-shadow-black-500'>Get started 🔥</a></Link>
                                 <a href="/" className='flex items-center px-4 py-4 w-max md:px-4 md:py-4 rounded-2xl text-link border border-link w-max justify-center'>Learn more</a>
                         </div>
                     </div>
@@ -64,7 +67,7 @@ const About = () => {
                         <div className="card-content ">
                             <h1 className="text-2xl font-bold tracking-wider font-sora">Python Programming</h1>
                             <p className='pText'> Key Python concepts include variables, control flow, functions, data structures, object-oriented programming, and error handling.</p>
-                            <a href="" className='getStartedButton'>Get Started</a>
+                            <Link to="/join"><a href="" className='getStartedButton'>Get Started</a></Link>
                         </div>
                         
                     </div>
@@ -78,7 +81,7 @@ const About = () => {
                 <div className="card-content">
                         <h1 className="text-2xl font-bold tracking-wider font-sora">Data Analytics</h1>
                         <p className='pText'> Key data analytics concepts include data collection, cleaning, exploratory analysis, visualization, statistical modeling, and deriving actionable insights.</p>
-                        <a href="" className='getStartedButton'>Get Started</a>
+                        <Link to="/join"><a href="" className='getStartedButton'>Get Started</a></Link>
                     </div>
                 </div>
                 </div>
@@ -91,7 +94,7 @@ const About = () => {
                 <div className="card-content">
                         <h1 className="text-2xl font-bold tracking-wider font-sora">Machine Learning</h1>
                         <p className='pText'> Key machine learning concepts include data preprocessing, feature engineering, model selection, training, evaluation, and tuning for accurate predictions.</p>
-                        <a href="" className='getStartedButton'>Get Started</a>
+                       <Link to="/join"><a href="" className='getStartedButton'>Get Started</a></Link>
                     </div>
                 </div>
                 </div>
