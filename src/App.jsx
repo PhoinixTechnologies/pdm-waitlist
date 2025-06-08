@@ -12,7 +12,7 @@ import VerifySuccess from './verifySuccess';
 function App() {
   return (
     <Router>
-      <div className='content w-100vw overflow-hidden scroll-smooth'>
+      <div className='content w-100vw overflow-hidden scroll-smooth bg-black'>
         <Routes>
           <Route path="/" element={
             <>
