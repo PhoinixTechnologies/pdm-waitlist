@@ -111,7 +111,7 @@ const Navbar = () => {
     variants={navAnimate}
     initial='initial'
     animate='visible'
-    className=" bg-black/60 flex flex-col md:flex-row  md:justify-between md:items-center py-3  absolute inset-x-0 top-0 h-15">
+    className=" bg-black/60  flex flex-col md:flex-row  md:justify-between md:items-center py-3  absolute inset-x-0 top-0 h-15">
       <div className='flex justify-between px-10   items-center'>
       <div className="text-white flex items-center gap-3 h-max text-lg font-semibold max-w-50">
           <LazyLoadImage src={logo} alt="" className='w-12' />
@@ -129,15 +129,15 @@ const Navbar = () => {
         </div>
     </div>
       <AnimatePresence>
-        {isvisible && (
+        {!isvisible && (
           <motion.div 
           variants={dropDownAnimate}
           initial='initial'
           animate='visible'
           exit='exit'
-            className='mt-2 bg-black/60 px-10 py-2 flex flex-col md:flex-row items-end md:items-center gap-y-3 gap-x-3 md:min-w-[70%] md:justify-between  md:flex'>
+            className='mt-2 md:mt-0 bg-black/60 md:bg-transparent px-10 py-2 flex flex-col md:flex-row items-end md:items-center gap-y-3 gap-x-3 md:min-w-[70%] md:justify-between  md:flex'>
             <AnimatePresence>
-              {isvisible && (
+              {!isvisible && (
                 <motion.div 
                   variants={linkAnimate}
                 className=" overflow-hidden flex text-white gap-x-10 items-end md:items-center md:justify-center font-normal font-link max-w-80 flex-col md:flex-row gap-y-3 " >
