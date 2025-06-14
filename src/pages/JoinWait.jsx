@@ -138,7 +138,7 @@ const Join = () => {
                 {/* Right Side - Form */}
                 <motion.div 
                     variants={containerVariants}
-                    className='sm:max-md:w-[60%] w-[90%] lg:w-[40%] h-[100%] flex flex-col gap-y-10 items-center'
+                    className='sm:max-md:w-[60%] md:max-lg:w-[70%] w-[90%] lg:w-[40%] h-[100%] flex flex-col gap-y-10 items-center'
                 >
                     {/* Logo and Title */}
                     <motion.div 
