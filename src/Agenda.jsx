@@ -57,7 +57,7 @@ const Agenda = () => {
                         </div>
                     </div>
             </div>
-                    <div className='grid grid-rows-auto grid-cols-auto w-[90%] h-fit text-white relative md:absolute p-1 -top-40 md:top-10 gap-10 md:gap-x-10 justify-center inset-x-0 place-self-center'>
+                    <div className='grid grid-rows-auto grid-cols-auto w-[90%] h-fit text-white relative md:absolute p-1 -top-20 md:top-10 gap-10 md:gap-x-10 justify-center inset-x-0 place-self-center'>
                             <div className=' '>
                                 <h3 className='w-fit font-link font-bold text-5xl/20 md:w-[95%] md:max-lg:text-5xl lg:text-6xl/20'>
                                 Got Questions? <span className = "hidden md:inline-flex"> - </span>Let's Talk About Your Programming Goals!

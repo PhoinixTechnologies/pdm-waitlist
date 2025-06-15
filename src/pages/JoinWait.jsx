@@ -251,7 +251,7 @@ const Join = () => {
                                 whileHover="hover"
                                 whileTap="tap"
                                 type="submit"
-                                className='mt-4 w-full bg-[#2A27C9] text-white py-3 rounded-xl font-semibold'
+                                className='mt-4 w-full bg-[#2A27C9] text-white py-3 rounded-xl font-semibold cursor-pointer'
                             >
                                 Create Account
                             </motion.button>

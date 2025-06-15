@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
@@ -138,11 +139,11 @@ const Connect = () => {
                 initial="hidden"
                 animate={controls}
                 variants={containerVariants}
-                className='flex w-full gap-x-6 gap-y-5 justify-center text-white h-max py-7 bg-[#2A27C9] items-center flex-col sm:flex-row'
+                className='flex w-full gap-x-6 gap-y-5 justify-center text-white h-max py-7 bg-[#2A27C9] items-center flex-col sm:flex-row lg:px-20'
             >
                 <motion.div 
                     variants={itemVariants}
-                    className='w-[80%] sm:max-md:w-[45%] md:w-[50%] font-link h-max p-2 gap-y-5 flex flex-col md:items-start items-center'
+                    className='w-[80%] sm:max-md:w-[45%] md:w-[50%] font-link h-max p-2 gap-y-5 flex flex-col md:items-start items-center  '
                 >
                     <p className='font-semibold text-4xl/15 md:text-3xl/10 w-fit md:w-[100%]'>
                         Subscribe to our Newsletter
