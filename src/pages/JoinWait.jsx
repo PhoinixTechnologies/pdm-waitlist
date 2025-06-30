@@ -6,6 +6,7 @@ import logo_enlarge from '../img/logo_enlarge.png';
 import py from '../img/polygon.png';
 import da from '../img/polytwo.png';
 import ml from '../img/polythree.png';
+import handleSubmit from '../utils/submitForm';
 
 const Join = () => {
     // Animation variants
@@ -161,7 +162,7 @@ const Join = () => {
                             Create an account
                         </motion.h1>
                         
-                        <form action="" className='px-10 gap-y-7 flex flex-col'>
+                        <form onSubmit={handleSubmit} className='px-10 gap-y-7 flex flex-col'>
                             {/* Full Name */}
                             <motion.div 
                                 variants={formItemVariants}
@@ -173,6 +174,7 @@ const Join = () => {
                                     type="text" 
                                     placeholder="Enter your full name" 
                                     className="w-full outline-none bg-transparent border-2 py-3 px-3 rounded-xl border-[#9EA2AE]" 
+                                    name='fullname' required
                                 />
                             </motion.div>
 
@@ -181,26 +183,13 @@ const Join = () => {
                                 variants={formItemVariants}
                                 className='flex flex-col px-1 gap-1'
                             >
-                                <label className='font-link text-lg font-medium'>Email Address</label>
+                                <label className='font-link text-lg font-medium'> Email Address </label>
                                 <motion.input 
                                     whileFocus={{ scale: 1.02 }}
                                     type="email" 
                                     placeholder="Enter your email address" 
                                     className="w-full outline-none bg-transparent border-2 py-3 px-3 rounded-xl border-[#9EA2AE]" 
-                                />
-                            </motion.div>
-
-                            {/* Password */}
-                            <motion.div 
-                                variants={formItemVariants}
-                                className='flex flex-col px-1 gap-1'
-                            >
-                                <label className='font-link text-lg font-medium'>Password</label>
-                                <motion.input 
-                                    whileFocus={{ scale: 1.02 }}
-                                    type='password' 
-                                    placeholder="Enter your password" 
-                                    className="w-full outline-none bg-transparent border-2 py-3 px-3 rounded-xl border-[#9EA2AE]" 
+                                    name='email' required
                                 />
                             </motion.div>
 
@@ -209,15 +198,17 @@ const Join = () => {
                                 variants={formItemVariants}
                                 className='flex flex-col px-1 gap-1'
                             >
-                                <label className='font-link text-lg font-medium'>What do you want to learn?</label>
+                                <label className='font-link text-lg font-medium'> What do you want to learn? </label>
                                 <motion.select 
                                     whileFocus={{ scale: 1.02 }}
-                                    className='w-full outline-none bg-transparent border-2 rounded-xl py-3 px-3 border-[#9EA2AE]'
+                                    className='w-full outline-none bg-transparent border-2 rounded-xl py-3 px-3 border-[#9EA2AE]' 
+                                    name='course'
+                                    required
                                 >
-                                    <option value="0">Select Course:</option>
-                                    <option value="1">Python Programming</option>
-                                    <option value="2">Machine Learning</option>
-                                    <option value="3">Artificial Intelligence</option>
+                                    <option value="">Select Course:</option>
+                                    <option value="Python Programming"> Python Programming</option>
+                                    <option value="Machine Learning"> Machine Learning</option>
+                                    <option value="Artificial Intelligence"> Artificial Intelligence</option>
                                 </motion.select>
                             </motion.div>
 
@@ -226,21 +217,21 @@ const Join = () => {
                                 variants={formItemVariants}
                                 className='flex flex-col px-1 gap-2'
                             >
-                                <label className='font-link text-lg font-medium'>Are you a Student?</label>
+                                <label className='font-link text-lg font-medium'> Are you a Student? </label>
                                 <div className='flex gap-6'>
                                     <motion.span 
                                         whileHover={{ scale: 1.05 }}
                                         className='flex gap-2 items-center'
                                     >
-                                        <label className='font-link text-lg font-medium'>Yes</label>
-                                        <input type="checkbox" className='w-5 h-5 border-2 rounded-xl border-[#9EA2AE]' />
+                                        <label className='font-link text-lg font-medium'> Yes </label>
+                                        <input type="radio" name="student" value="Yes" required className='w-5 h-5 border-2 rounded-xl border-[#9EA2AE]' />
                                     </motion.span>
                                     <motion.span 
                                         whileHover={{ scale: 1.05 }}
                                         className='flex gap-2 items-center'
                                     >
-                                        <label className='font-link text-lg font-medium'>No</label>
-                                        <input type="checkbox" className='w-5 h-5 border-2 rounded-xl border-[#9EA2AE]' />
+                                        <label className='font-link text-lg font-medium'> No </label>
+                                        <input type="radio" name="student" value="No" required className='w-5 h-5 border-2 rounded-xl border-[#9EA2AE]' />
                                     </motion.span>
                                 </div>
                             </motion.div>
@@ -255,6 +246,9 @@ const Join = () => {
                             >
                                 Create Account
                             </motion.button>
+
+                            {/* Error Message */}
+                            <em id='form-error' className='text-red-500 text-sm font-medium pt-2 text-center'></em>
                         </form>
                     </motion.div>
                 </motion.div>
