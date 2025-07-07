@@ -207,8 +207,8 @@ const Join = () => {
                                 >
                                     <option value="">Select Course:</option>
                                     <option value="Python Programming"> Python Programming</option>
-                                    <option value="Machine Learning"> Machine Learning</option>
-                                    <option value="Artificial Intelligence"> Artificial Intelligence</option>
+                                    <option value="Machine Learning">Data Analysis</option>
+                                    <option value="Artificial Intelligence"> Machine Learning</option>
                                 </motion.select>
                             </motion.div>
 
