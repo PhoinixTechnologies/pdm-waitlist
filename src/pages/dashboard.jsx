@@ -1,5 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import mylogo from '../assets/img/logo.png'
+
+// import tailwindcss from "@tailwindcss/vite";
 
 const Dashboard = () => {
     return (
@@ -104,7 +107,6 @@ const Dashboard = () => {
             </div>
 
         </div>
-
     )
 }
 

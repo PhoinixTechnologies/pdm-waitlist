@@ -2,6 +2,7 @@
 // main content changes
 
 import React from "react";
+import { FaUser, FaClock, FaBookmark, FaChartBar } from 'react-icons/fa';
 import Sidebar from '../components/sidebar';
 import Topbar from '../components/topbar';
 import { Outlet } from "react-router-dom";
@@ -15,14 +16,14 @@ const MainLayout = () => {
       <Sidebar />
 
       {/* Main Content Area */}
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 overflow-hidden bg-gray-900">
         {/* Horizontal Navigation */}
         <Topbar />
 
         {/* Page Content */}
-        <div className="flex-1 p-4 bg-gray-50 overflow-y-auto">
+        <main className="flex-1 p-6 overflow-y-auto">
           <Outlet />
-        </div>
+        </main>
       </div>
     </div>
   );

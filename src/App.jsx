@@ -15,8 +15,10 @@ import Coins from './pages/coins';
 
 function App() {
   return (
+    
     <Router>
-        <Routes>
+        <div className='flex h-screen w-full'>
+          <Routes>
           <Route path='/' element={<MainLayout />}>
           <Route index element={<Dashboard />} />
           <Route path='courses' element={<Courses />} />
@@ -28,7 +30,10 @@ function App() {
           <Route path="logout" element={<Logout />} />
           </Route>
         </Routes>
+        </div>
     </Router>
+
+    
   );
 }
 
