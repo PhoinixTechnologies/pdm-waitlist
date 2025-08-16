@@ -18,7 +18,7 @@ const Sidebar = () => {
 
 
   return (
-    <aside className="w-64 bg-gray-200 text-blue-400 flex flex-col p-5 border border-gray-300">
+    <aside className="w-64 bg-white text-blue-400 flex flex-col p-5 border border-gray-300">
 
       {/* Logo */}
       <div className="flex items-center gap-2 mb-8">
@@ -30,7 +30,7 @@ const Sidebar = () => {
         <span className="text-xl font-bold text-black">My PDM Tutor</span>
       </div>
 
-            <div className='fixed top-20 w-screen border-t border-gray-300 '></div>
+            <div className='relative left-1/2 -ml-[10vw] w-screen border-t border-gray-300'></div>
 
       {/* Navigation */}
       <nav className="flex-1 mt-6 space-y-1">
