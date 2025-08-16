@@ -30,7 +30,7 @@ const Sidebar = () => {
         <span className="text-xl font-bold text-black">My PDM Tutor</span>
       </div>
 
-            <div className='border border-gray-300 w-full'></div>
+            <div className='fixed top-20 w-screen border-t border-gray-300 '></div>
 
       {/* Navigation */}
       <nav className="flex-1 mt-6 space-y-1">
