@@ -14,17 +14,21 @@ const MainLayout = () => {
     <div className="flex h-screen">
       {/* Vertical Navigation */}
       <Sidebar />
+      
 
       {/* Main Content Area */}
-      <div className="flex flex-col flex-1 overflow-hidden bg-gray-900">
+      <div className="flex flex-col flex-1 overflow-hidden">
         {/* Horizontal Navigation */}
         <Topbar />
 
         {/* Page Content */}
-        <main className="flex-1 p-6 overflow-y-auto">
+          <div className="flex-1 p-6 overflow-y-auto">
           <Outlet />
-        </main>
+          </div>
       </div>
+
+
+
     </div>
   );
 };

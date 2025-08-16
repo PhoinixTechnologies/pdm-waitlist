@@ -18,16 +18,19 @@ const Sidebar = () => {
 
 
   return (
-    <aside className="w-64 bg-gray-900 text-white flex flex-col p-5">
+    <aside className="w-64 bg-gray-200 text-blue-400 flex flex-col p-5 border border-gray-300">
+
       {/* Logo */}
       <div className="flex items-center gap-2 mb-8">
-        <LazyLoadImage 
+        <LazyLoadImage
         src={logo}
           alt="Logo"
           className="w-8 h-8 rounded-full flex items-center justify-center"
            />
-        <span className="text-xl font-bold">My PDM Tutor</span>
+        <span className="text-xl font-bold text-black">My PDM Tutor</span>
       </div>
+
+            <div className='border border-gray-300 w-full'></div>
 
       {/* Navigation */}
       <nav className="flex-1 mt-6 space-y-1">

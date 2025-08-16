@@ -17,7 +17,7 @@ function App() {
   return (
     
     <Router>
-        <div className='flex h-screen w-full'>
+        <div className=''>
           <Routes>
           <Route path='/' element={<MainLayout />}>
           <Route index element={<Dashboard />} />

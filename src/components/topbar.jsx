@@ -9,7 +9,7 @@ const Topbar = () => {
     <header className="flex items-center px-6 py-4">
       {/* Full-width search container */}
       <div className="flex-1 max-w-4xl mr-6">
-        <div className="flex items-center w-full border border-gray-300 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-500">
+        <div className="flex items-center w-full border border-gray-300 rounded-lg px-3 py-2">
           <span className="text-gray-400 mr-2">🔍</span>
           <input
             type="text"
