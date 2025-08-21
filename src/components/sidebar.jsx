@@ -2,11 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import logo from '../assets/img/logo.png';
+// import dashb from '../assets/dashboard.png';
 import { FaTh, FaBook, FaFileAlt, FaCertificate, FaCreditCard, FaCoins, FaCogs, FaSignOutAlt } from 'react-icons/fa';
 
 const Sidebar = () => {
   const navItems = [
-    { label: "Dashboard", path: "/", icon: FaTh },
+    { label: "Dashboard", path: "/", icon: FaTh},
     { label: "Courses", path: "/courses", icon: FaBook },
     { label: "Resources", path: "/resources", icon: FaFileAlt },
     { label: "Certificates", path: "/certificates", icon: FaCertificate },
