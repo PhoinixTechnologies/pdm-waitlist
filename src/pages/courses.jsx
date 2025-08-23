@@ -20,7 +20,7 @@ const Courses = () => {
                         onClick={() => setActiveButton('allCourses')}
                         className={`inline-flex px-3 py-2 items-center justify-center rounded-lg  font-poppins text-lg font-normal cursor-pointer hover:bg-[#0056b3] ${
                             activeButton === 'allCourses' 
-                                ? 'bg-[#00f]' 
+                                ? 'bg-[#00f] text-white' 
                                 : 'bg-white border-2 border-[#A4A2A278] text-black hover:bg-[#f0f0f0]'
                         }`}
                     >
@@ -28,7 +28,7 @@ const Courses = () => {
                     </button>
                     <button
                         onClick={() => setActiveButton('myCourses')}
-                        className={`inline-flex px-3 py-2 items-center justify-center rounded-lg font-poppins text-lg font-normal gap-2 cursor-pointer ${
+                        className={ `inline-flex px-3 py-2 items-center justify-center rounded-lg font-poppins text-lg font-normal gap-2 cursor-pointer ${
                             activeButton === 'myCourses' 
                                 ? 'bg-[#00f] text-white' 
                                 : 'bg-white border-2 border-[#A4A2A278] text-black hover:bg-[#f0f0f0]'
