@@ -21,7 +21,7 @@ const courseData = [
     title: "Learn Data Analytics Masterclass  ",
     subtitle:"Learn Python Programming Masterclass ",
     price: "500coins",
-    status: "Enroll Now",
+    status: "In Progress",
     },
     {
     key:4,

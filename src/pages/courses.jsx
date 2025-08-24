@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CoursesList from '../sections/CList.jsx';
-import MyCourses from '../sections/MyCourses.jsx';
+import MyCourses from '../sections/CProgress.jsx';
+import { coursesInProgressOrCompleted } from '../sections/CProgress.jsx';
 
 const Courses = () => {
     const [activeButton, setActiveButton] = useState('allCourses'); // 'allCourses' or 'myCourses'
@@ -36,7 +37,7 @@ const Courses = () => {
                     >
                         My Courses 
                         <span className='flex px-1.5 flex-col justify-center items-center rounded-md bg-[#00f] text-white font-poppins text-md font-medium'>
-                            1
+                            {coursesInProgressOrCompleted}
                         </span>
                     </button>
                 </nav>

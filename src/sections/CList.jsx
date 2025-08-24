@@ -1,7 +1,7 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import CourseCard from '../layouts/CLayout';
-import courseData from '../sections/CData';
+import courseData from './CData.js';
 const createCourseCard = (courseData) => {
     return(
         <CourseCard 
