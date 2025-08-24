@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CoursesList from '../sections/CList.jsx';
-import MyCourses from '../sections/MyCourses.jsx';
+import MyCourses from '../sections/CProgress.jsx';
+import { coursesInProgressOrCompleted } from '../sections/CProgress.jsx';
 
 const Courses = () => {
     const [activeButton, setActiveButton] = useState('allCourses'); // 'allCourses' or 'myCourses'
@@ -20,7 +21,7 @@ const Courses = () => {
                         onClick={() => setActiveButton('allCourses')}
                         className={`inline-flex px-3 py-2 items-center justify-center rounded-lg  font-poppins text-lg font-normal cursor-pointer hover:bg-[#0056b3] ${
                             activeButton === 'allCourses' 
-                                ? 'bg-[#00f]' 
+                                ? 'bg-[#00f] text-white' 
                                 : 'bg-white border-2 border-[#A4A2A278] text-black hover:bg-[#f0f0f0]'
                         }`}
                     >
@@ -28,7 +29,7 @@ const Courses = () => {
                     </button>
                     <button
                         onClick={() => setActiveButton('myCourses')}
-                        className={`inline-flex px-3 py-2 items-center justify-center rounded-lg font-poppins text-lg font-normal gap-2 cursor-pointer ${
+                        className={ `inline-flex px-3 py-2 items-center justify-center rounded-lg font-poppins text-lg font-normal gap-2 cursor-pointer ${
                             activeButton === 'myCourses' 
                                 ? 'bg-[#00f] text-white' 
                                 : 'bg-white border-2 border-[#A4A2A278] text-black hover:bg-[#f0f0f0]'
@@ -36,7 +37,7 @@ const Courses = () => {
                     >
                         My Courses 
                         <span className='flex px-1.5 flex-col justify-center items-center rounded-md bg-[#00f] text-white font-poppins text-md font-medium'>
-                            1
+                            {coursesInProgressOrCompleted}
                         </span>
                     </button>
                 </nav>
